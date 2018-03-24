@@ -16,7 +16,7 @@ class AddNewContact extends Component {
   };
   
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div>
         <p>Add New Contact</p>

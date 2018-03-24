@@ -14,16 +14,7 @@ const reducer = (state = initialState, action) => {
     case FETCH_CONTACT_LIST_REQUEST:
       return {...state, loading: true};
     case FETCH_CONTACT_LIST_SUCCESS:
-      return {
-        ...state, contacts:
-          {
-            ...state.contacts,
-            [action.name]: state.contacts.name,
-            [action.phone]: state.contacts[action.phone],
-            [action.email]: state.contacts[action.email],
-            [action.photo]: state.contacts[action.photo]
-          }
-      };
+      return {...state, contacts: action.name};
     case FETCH_CONTACT_LIST_ERROR:
       return {...state, loading: false};
     default:
